@@ -1,0 +1,29 @@
+{% load static %}
+<title>Архив статей</title>
+
+<body class="archive">
+    <link rel="stylesheet" href="{% static "css/article.css" %}" />
+<div class="header">
+    <h2 class="register-link">
+        <a href="{% url 'register' %}">Регистрация</a>
+    </h2>
+    <h2 class="auth-link">
+        <a href="{% url 'auth' %}">Войти</a>
+    </h2>
+    <img src="{% static "images/AllenCard.png" %}" alt="Allen" >
+</div>
+<div class="archive">
+    {% for post in posts %}
+    <div class="one-post">
+    <h2 class="post-title">
+        <a href="{% url 'get_article' post.id %}">{{ post.title }}</a>
+    </h2>
+    <div class="article-info">
+    <div class="article-author">{{ post.author.username }}</div>
+    <div class="article-created- date">{{ post.created_date }}</div>
+    </div>
+    <p class="article-text">{{ post.get_excerpt }}</p>
+    </div>
+    {% endfor %}
+</div>
+</body>

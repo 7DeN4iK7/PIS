@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Django Public Blog - Регистрация</title>
+    </head>
+    <body class="register">
+        <link rel="stylesheet" href="{% static "css/article.css" %}" />
+        <div class="content">
+            <h1>Регистрация</h1>
+            <form method="POST">{% csrf_token %}
+                <div class="login_input">
+                    <input type="text" name="login" placeholder="Имя" value="{{ form.login }}">
+                </div>
+                <div class="email_input">
+                    <input type="text" name="email" placeholder="Почта" value="{{ form.email }}">
+                </div>
+                <div class="password_input">
+                    <input type="password" name="password" placeholder="Пароль" value="{{ form.password }}">
+                </div>
+                {{ form.errors }}
+                <div class="reg_btn">
+                    <input type="submit" value="Зарегистрироваться">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

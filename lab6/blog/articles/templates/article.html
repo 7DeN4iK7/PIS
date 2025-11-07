@@ -1,0 +1,25 @@
+{% load static %}
+<title>{{ post.title }}</title>
+
+<body class="article">
+    <link rel="stylesheet" href="{% static "css/article.css" %}" />
+    <h2 class="all-articles">
+        <a href="{% url 'archive' %}">Все статьи</a>
+    </h2>
+    <h2 class="register-link">
+        <a href="{% url 'register' %}">Регистрация</a>
+    </h2>
+    <h2 class="auth-link">
+        <a href="{% url 'auth' %}">Войти</a>
+    </h2>
+    <div class="article-detail">
+        <h1 class="post-title">{{ post.title }}</h1>
+        <div class="article-info">
+            <div class="article-author">Автор: {{ post.author.username }}</div>
+            <div class="article-created-date">Дата публикации: {{ post.created_date }}</div>
+        </div>
+        <div class="article-content">
+            {{ post.text|linebreaks }}
+        </div>
+    </div>
+</body>

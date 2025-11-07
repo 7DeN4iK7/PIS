@@ -1,0 +1,71 @@
+body {
+    background: #1abc9c;
+    font-family: Tahoma, Arial, sans-serif; 
+    color: #ffffff;
+}
+
+.register .content,
+.auth .content {
+    text-align: center;
+}
+
+.login_input input,
+.password_input input,
+.email_input input {
+    width: 300px;
+    height: 40px;
+    padding: 5px 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+.reg_btn input[type="submit"],
+.auth_btn input[type='submit'] {
+    width: 200px;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 40px;
+}
+
+
+.header img {
+    display: block; 
+    width: 318px; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.archive {
+    width: 960px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    display: block;
+    color: #ffffff;
+    text-align: right;
+}
+
+.auth a {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+}
+
+.post-title a {
+    text-align: left;
+}
+
+.article-author { 
+    width: 50%; 
+    float: left;
+}
+
+.article-created-date { 
+    text-align: right;
+}
+
+
